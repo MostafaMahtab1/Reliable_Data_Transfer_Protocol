@@ -24,7 +24,7 @@ Design Goals:
 
 Packet Format:
 
-All MTP packets share a fixed-size header followed by an optional payload.
+All RDTP packets share a fixed-size header followed by an optional payload.
 
 Header Structure (16 bytes total)
 
@@ -162,7 +162,7 @@ Prevents data loss and preserves ordering.
 ### Network Fault Simulation ###
 
 
-MTP is tested using a simulated unreliable channel that can introduce:
+RDTP is tested using a simulated unreliable channel that can introduce:
 
 a -> Packet loss
 
