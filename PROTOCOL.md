@@ -1,12 +1,12 @@
-                            M Transport Protocol (MTP)
-                        ===================================
+                             Realiable Data Transfer Protocol (RDTP)
+                            ==========================================
 
 Overview:
 
-M Transport Protocol (MTP) is a custom reliable file transfer protocol built on top of UDP.
+Reliable Data Transfer Protocol (RDTP) is a custom reliable file transfer protocol built on top of UDP.
 It provides reliable, ordered, and corruption-free delivery of data over an unreliable network by implementing TCP-inspired mechanisms at the application layer.
 
-MTP is designed for educational and experimental purposes and demonstrates core transport-layer concepts such as sequencing, acknowledgments, retransmissions, sliding windows, and congestion handling.
+RDTP is designed for educational and experimental purposes and demonstrates core transport-layer concepts such as sequencing, acknowledgments, retransmissions, sliding windows, and congestion handling.
 
 
 Design Goals:
@@ -31,9 +31,9 @@ Header Structure (16 bytes total)
 Field	         Size (bytes)	   Description
 
 packet_type	         4	           Packet type identifier
-sequence_number	   4	           Packet sequence number
-payload_length	      4	           Length of payload in bytes
-checksum	            4	           CRC32 checksum
+sequence_number	     4	           Packet sequence number
+payload_length	     4	           Length of payload in bytes
+checksum	           4	           CRC32 checksum
 
 
 Header fields are encoded in network byte order (big-endian).
@@ -44,7 +44,7 @@ Packet Types:
 Type	   Value	   Description
 
 DATA	     0	       Data packet carrying file content
-ACK	     1	       Acknowledgment packet
+ACK	       1	       Acknowledgment packet
 
 
 DATA Packets:
@@ -195,5 +195,5 @@ No advanced congestion control (e.g., TCP Reno/Cubic)
 
 Summary
 
-MTP demonstrates how reliable data transfer can be built over UDP using fundamental transport-layer concepts.
+RDTP demonstrates how reliable data transfer can be built over UDP using fundamental transport-layer concepts.
 The protocol emphasizes clarity, correctness, and extensibility while remaining simple enough for experimentation and learning the core ideas of data transfer in computer networking.
